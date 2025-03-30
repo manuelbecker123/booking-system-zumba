@@ -101,7 +101,7 @@ CREATE TABLE slots_registered (
     time TIME NOT NULL,
     emailid VARCHAR(100) NOT NULL,
     CONSTRAINT unique_user_slot UNIQUE (emailid, date, time)
-) ENGINE=InnoDB;
+)
 ```
 
 
