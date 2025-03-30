@@ -76,7 +76,9 @@ VALUES (
     'admin'
 );
 
+-- ====================================
 -- Table: slots
+-- ====================================
 CREATE TABLE slots (
     slot_id INT PRIMARY KEY AUTO_INCREMENT,
     date DATE NOT NULL,
@@ -90,7 +92,9 @@ VALUES
   ('2025-04-10', '09:00:00', 20),
   ('2025-04-10', '13:00:00', 20);
 
+-- ====================================
 -- Table: slots_registered
+-- ====================================
 CREATE TABLE slots_registered (
     registration_id INT PRIMARY KEY AUTO_INCREMENT,
     date DATE NOT NULL,
