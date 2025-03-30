@@ -9,9 +9,9 @@ This is a dynamic web-based application developed using **Java Servlets**, **JSP
 - Java EE (Servlets, JSP)
 - JDBC for database communication
 - MySQL for data storage
-- Apache Tomcat for deployment
+- Apache Tomcat 9.0 for deployment
 - Maven for build and dependency management
-- HTML, CSS, JSP for frontend
+- JSP, CSS, Bootstrap for frontend
 
 ---
 
@@ -105,7 +105,7 @@ CREATE TABLE slots_registered (
 ```
 
 
-  4. **Set DB credentials** in DbUtil.java
+  4. **Set DB credentials** in DbUtilHelperConstant.java
   ```java
   String jdbcURL = "jdbc:mysql://localhost:3306/phase_2Project";
   String dbUser = "root";
