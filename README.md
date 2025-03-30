@@ -37,6 +37,7 @@ This is a dynamic web-based application developed using **Java Servlets**, **JSP
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/manuelbecker123/zumba-slot-booking.git
+   ```
 
 2. **Open in SpringtoolSuite**: as a Maven Project.
 
@@ -105,16 +106,18 @@ CREATE TABLE slots_registered (
     emailid VARCHAR(100) NOT NULL,                     -- Email of the user who registered
     CONSTRAINT unique_user_slot UNIQUE (emailid, date, time)  -- One user can register only once for a specific date and time
 ) ENGINE=InnoDB;
+```
 
   4. **Set DB credentials** in DbUtil.java
   ```java
   String jdbcURL = "jdbc:mysql://localhost:3306/phase_2Project";
   String dbUser = "root";
   String dbPassword = "your_password";
-
+```
   5.  **Package the project using maven**
   ```bash
   mvn clean package
+```
 
   6. Run the index file with Tomcat Server. 
 
