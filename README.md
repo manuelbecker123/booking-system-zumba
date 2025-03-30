@@ -42,7 +42,7 @@ This is a dynamic web-based application developed using **Java Servlets**, **JSP
 
 2. **Open in SpringtoolSuite**: as a Maven Project.
 
-3. **Configure MySQL Database:**
+3. **Configure MySQL Database:** (Based on my Database Tables when I was building the project)
   ```sql
 -- Create the database
 CREATE DATABASE IF NOT EXISTS phase_2Project;
@@ -77,6 +77,19 @@ VALUES (
     'admin'
 );
 
+--(if needed later) ... Update Existing data by ID 
+
+UPDATE users
+SET name = 'Updated Name',
+    age = 30,
+    weight = 75.50,
+    address = 'Updated Address',
+    email = 'updated@example.com',
+    tel_number = '+1234567890',
+    password = 'newpassword',
+    role = 'admin'
+WHERE id = 1;
+
 -- ====================================
 -- Table: slots
 -- ====================================
@@ -94,6 +107,13 @@ VALUES
   ('2025-04-10', '13:00:00', 20);
 --continue with any aditional slots you would like to add
 
+-- (if needed later) ... Update a slot by slot_id 
+UPDATE slots
+SET date = '2025-04-11',
+    time = '10:00:00',
+    count = 15
+WHERE slot_id = 1;
+
 -- ====================================
 -- Table: slots_registered
 -- ====================================
@@ -104,6 +124,14 @@ CREATE TABLE slots_registered (
     emailid VARCHAR(100) NOT NULL,
     CONSTRAINT unique_user_slot UNIQUE (emailid, date, time)
 )ENGINE=InnoDB;
+
+-- (if needed later) ... Update a registered slot by registration_id
+UPDATE slots_registered
+SET date = '2025-04-11',
+    time = '10:00:00',
+    emailid = 'updateduser@example.com'
+WHERE registration_id = 1;
+
 ```
 
 
