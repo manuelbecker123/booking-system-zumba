@@ -91,6 +91,7 @@ INSERT INTO slots (date, time, count)
 VALUES
   ('2025-04-10', '09:00:00', 20),
   ('2025-04-10', '13:00:00', 20);
+--continue with any aditional slots you would like to add
 
 -- ====================================
 -- Table: slots_registered
@@ -101,7 +102,7 @@ CREATE TABLE slots_registered (
     time TIME NOT NULL,
     emailid VARCHAR(100) NOT NULL,
     CONSTRAINT unique_user_slot UNIQUE (emailid, date, time)
-)
+)ENGINE=InnoDB;
 ```
 
 
