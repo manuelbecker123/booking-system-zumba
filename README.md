@@ -89,6 +89,9 @@ SET name = 'Updated Name',
     password = 'newpassword',
     role = 'admin'
 WHERE id = 1;
+-- (if needed later) ... Delete a user by ID
+DELETE FROM users
+WHERE id = 1;
 
 -- ====================================
 -- Table: slots
@@ -114,6 +117,10 @@ SET date = '2025-04-11',
     count = 15
 WHERE slot_id = 1;
 
+-- (if needed later) ...Delete a slot by slot_id
+DELETE FROM slots
+WHERE slot_id = 1;
+
 -- ====================================
 -- Table: slots_registered
 -- ====================================
@@ -130,6 +137,10 @@ UPDATE slots_registered
 SET date = '2025-04-11',
     time = '10:00:00',
     emailid = 'updateduser@example.com'
+WHERE registration_id = 1;
+
+-- (if needed later) ... Delete a registered slot by registration_id
+DELETE FROM slots_registered
 WHERE registration_id = 1;
 
 ```
