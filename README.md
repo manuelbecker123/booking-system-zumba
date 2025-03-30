@@ -45,6 +45,7 @@ This is a dynamic web-based application developed using **Java Servlets**, **JSP
 3. **Configure MySQL Database:** (Based on my Database Tables when I was building the project)
   ```sql
 -- Create the database
+
 CREATE DATABASE IF NOT EXISTS phase_2Project;
 USE phase_2Project;
 
@@ -64,6 +65,7 @@ CREATE TABLE users (
 ) ENGINE=InnoDB;
 
 -- Insert the admin user
+
 INSERT INTO users (id, name, age, weight, address, email, tel_number, password, role)
 VALUES (
     1,
@@ -77,6 +79,7 @@ VALUES (
     'admin'
 );
 
+
 --(if needed later) ... Update Existing data by ID 
 
 UPDATE users
@@ -89,13 +92,16 @@ SET name = 'Updated Name',
     password = 'newpassword',
     role = 'admin'
 WHERE id = 1;
+
 -- (if needed later) ... Delete a user by ID
+
 DELETE FROM users
 WHERE id = 1;
 
 -- ====================================
 -- Table: slots
 -- ====================================
+
 CREATE TABLE slots (
     slot_id INT PRIMARY KEY AUTO_INCREMENT,
     date DATE NOT NULL,
@@ -104,13 +110,15 @@ CREATE TABLE slots (
 ) ENGINE=InnoDB;
 
 -- Insert Available Slots with count
+
 INSERT INTO slots (date, time, count)
 VALUES
   ('2025-04-10', '09:00:00', 20),
   ('2025-04-10', '13:00:00', 20);
 --continue with any aditional slots you would like to add
 
--- (if needed later) ... Update a slot by slot_id 
+-- (if needed later) ... Update a slot by slot_id
+
 UPDATE slots
 SET date = '2025-04-11',
     time = '10:00:00',
@@ -124,6 +132,7 @@ WHERE slot_id = 1;
 -- ====================================
 -- Table: slots_registered
 -- ====================================
+
 CREATE TABLE slots_registered (
     registration_id INT PRIMARY KEY AUTO_INCREMENT,
     date DATE NOT NULL,
@@ -133,6 +142,7 @@ CREATE TABLE slots_registered (
 )ENGINE=InnoDB;
 
 -- (if needed later) ... Update a registered slot by registration_id
+
 UPDATE slots_registered
 SET date = '2025-04-11',
     time = '10:00:00',
@@ -140,6 +150,7 @@ SET date = '2025-04-11',
 WHERE registration_id = 1;
 
 -- (if needed later) ... Delete a registered slot by registration_id
+
 DELETE FROM slots_registered
 WHERE registration_id = 1;
 
