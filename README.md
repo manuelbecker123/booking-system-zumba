@@ -21,7 +21,7 @@ This is a dynamic web-based application developed using **Java Servlets**, **JSP
 - Home Page with Navigation Bar
 - Register as a Zumba participant
 - Log in with email and password
-- Keep Session Active while logged in (Logout destroys session)
+- Keep Session Active while logged in (Logout button stops session)
 - View available time slots
 - Register for an open slot
 - Receive appropriate success or warning messages
